@@ -1,6 +1,7 @@
 'use strict';
 
 const app = require('./app');
+const express = require('express');
 
 if (['production', 'ci'].includes(process.env.NODE_ENV)) {
   app.use(express.static('client/build'));
