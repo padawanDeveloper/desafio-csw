@@ -11,7 +11,7 @@
     "client": "npm run start --prefix client",
     "server": "nodemon index.js",
     "dev": "(npm run server) & npm run client",
-    "start": "node index.js",
+    "start": "NODE_ENV=production node index.js",
     "build": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
     "heroku-postbuild": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
