@@ -43,11 +43,11 @@ function App() {
         {data.map(obj => (
           <Marker key={obj.properties.id} position={obj.geometry.coordinates}>
             <Popup>
-              Nombre: {obj.properties.name}
-              <br />
-              Latitude: {obj.geometry.coordinates[0]}
-              <br />
-              Longitude: {obj.geometry.coordinates[1]}
+              <h2>{obj.properties.name}</h2>
+              <div>
+                <strong>Latitude:</strong> {obj.geometry.coordinates[0]} |{' '}
+                <strong>Longitude:</strong> {obj.geometry.coordinates[1]}
+              </div>
             </Popup>
           </Marker>
         ))}
