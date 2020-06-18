@@ -4,8 +4,7 @@ const app = require('./app');
 const express = require('express');
 
 if (['production', 'ci'].includes(process.env.NODE_ENV)) {
-  app.use('/', express.static(`${__dirname}/client/build`));
-  console.log('prod');
+  app.use(express.static(`${__dirname}/client/build`));
 
   const path = require('path');
   app.get('*', (req, res) => {
