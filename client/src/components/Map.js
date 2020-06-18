@@ -32,8 +32,8 @@ const MapComponent = props => {
       L.marker(obj.geometry.coordinates).addTo(map).bindPopup(
         `<span><h2>${obj.properties.name}</h2></span>
         <address>
-          <strong>Latitude:</strong> ${obj.geometry.coordinates[0]} |${' '}
-          <strong>Longitude:</strong> ${obj.geometry.coordinates[1]}
+          <strong>Latitud:</strong> ${obj.geometry.coordinates[0]} |${' '}
+          <strong>Longitud:</strong> ${obj.geometry.coordinates[1]}
         </address>`
       );
     });
